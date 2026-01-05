@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>💸 Expense Tracker</h1>
+
+    <!-- Formular adăugare cheltuială -->
+    <form id="expense-form">
+      <div class="form-row">
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" required step="0.01" min="0">
+        <select id="category">
+          <option value="Food">Food</option>
+          <option value="Bills">Bills</option>
+          <option value="Fun">Fun</option>
+          <option value="Other">Other</option>
+        </select>
+        <button>Add Expense</button>
+      </div>
+    </form>
+
+    <!-- Filtre categorii -->
+    <div class="filters">
+      <button onclick="setFilter('All')">All</button>
+      <button onclick="setFilter('Food')">Food</button>
+      <button onclick="setFilter('Bills')">Bills</button>
+      <button onclick="setFilter('Fun')">Fun</button>
+      <button onclick="setFilter('Other')">Other</button>
+    </div>
+
+    <!-- Total cheltuieli -->
+    <h2>Total: <span id="total">0</span> RON</h2>
+
+    <!-- Lista cheltuieli -->
+    <ul id="expense-list"></ul>
+    <p id="empty">No expenses yet 👋</p>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

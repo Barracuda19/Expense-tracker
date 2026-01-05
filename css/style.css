@@ -1,0 +1,201 @@
+/* RESET + BOX-SIZING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* APP CONTAINER */
+.app {
+  background: #ffffff;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* TITLE */
+.app h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* FORMULAR PE LINIE */
+.form-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-row input,
+.form-row select,
+.form-row button {
+  flex: 1 1 auto;
+  padding: 10px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON FORMULAR */
+button {
+  background: #0077cc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* TOTAL */
+h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* FILTRE CATEGORII */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 0.8rem;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.filters button:hover {
+  background: #cfcfcf;
+  transform: scale(1.03);
+}
+
+.filters button.active {
+  background: #0077cc;
+  color: #fff;
+}
+
+/* LISTA CHELTUIELI */
+#expense-list {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+#expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  background: #f1f3f5;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+/* TEXT CHELTUIALĂ */
+.expense-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 55%;
+  overflow-wrap: break-word;
+}
+
+/* BADGE CATEGORIE + HOVER */
+.category {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+  width: fit-content;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.category:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.category.Food { background: #4caf50; }
+.category.Bills { background: #ff9800; }
+.category.Fun { background: #9c27b0; }
+.category.Other { background: #607d8b; }
+
+/* SUMĂ */
+#expense-list span {
+  white-space: nowrap;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #e53935;
+  padding: 4px 6px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* EMPTY STATE */
+#empty {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ANIMAȚII */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* INPUT EDIT */
+.expense-text input {
+  animation: fadeIn 0.2s ease;
+  padding: 2px 4px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
